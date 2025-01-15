@@ -59,12 +59,12 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Pages for login and displaying the 8-ball.
+- **CSS** - look and feel of the website, color scheme and fomatting for desktop and smartphone viewing.
+- **React** - Interaction with buttons and handling changes between web pages.
+- **Service** - Retrieves information about the weather, random cat facts and random dog facts.
+- **DB/Login** - stores information about the user's questions and answers. Also securely stores user information and verifies login information.
+- **WebSocket** - Displays a notification on the side bar whenever another user has joined the COSMIC 8-Ball.
 
 ## 🚀 AWS deliverable
 
