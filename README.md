@@ -36,9 +36,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    actor->> You
+    actor->> Website
+    User->>Website: Open homepage
+    Website->>User: Display homepage
+    User->>Website: Login with credentials
+    Website->>User: Display user dashboard
 ```
 
 ### Key features
