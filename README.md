@@ -32,11 +32,11 @@ Do you feel paralyzed by choice in this increasingly consumer focused world? Do 
 But wait there's more, this 8 ball isn't just your everyday, run-of-the-mill magic 8 ball, it is more accurately named the COSMIC 8-Ball, on account of it's cosmically large set of answers (including weather reports and random cat facts).
 
 ### Design
+![Login Page](Login_page_chris_website.png)
+![Design image](Chris_Website_layout.png)
 
-![Design image](placeholder.png)
 
-
-
+<!-- 
 ```mermaid
 sequenceDiagram
     actor->> You
@@ -45,7 +45,7 @@ sequenceDiagram
     Website->>User: Display homepage
     User->>Website: Login with credentials
     Website->>User: Display user dashboard
-```
+``` -->
 
 ### Key features
 
