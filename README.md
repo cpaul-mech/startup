@@ -49,9 +49,11 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- login and logout capabilities!
+- Additional responses than the usual ones!
+- Answers your deepest questions! (provided you don't care so much about the quality)
+- Lets you know if someone else is logged on as well
+- Displays a list of all the answers you've received upon request
 
 ### Technologies
 
