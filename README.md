@@ -20,14 +20,16 @@ For this deliverable I did the following:
 I checked the box `[x]` and added a description for things I completed.
 
 - [x] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
+- [x] A concise and compelling elevator pitch
 - [ ] Description of key features
 - [ ] Description of how you will use each technology
 - [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Do you feel paralyzed by choice in this increasingly consumer focused world? Do you need an excuse to not work on homework? Do you need to know whether a certain someone likes you? Well, the magic 8 ball waits to answer these pressing questions and bring you completely relevant and truthful advice. 
+
+But wait there's more, this 8 ball isn't just your everyday, run-of-the-mill magic 8 ball, it is more accurately named the COSMIC 8-Ball, on account of it's cosmically large set of answers (including weather reports and random cat facts).
 
 ### Design
 
