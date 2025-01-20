@@ -17,6 +17,8 @@ Also, this is a super important command! This allows me to ssh into my server an
 'ssh -i ~/Documents/Chris_Documents/cpaulmechcs260webserver.pem ubuntu@44.199.41.73'
 If I did it right, I should be using the free tier of aws, and if something crazy happens they might charge me a little, but it should not be a whole lot of charges.
 
+Apparently we need to pay for a domain name!! How exciting 
+
 ## Caddy
 
 
