@@ -18,6 +18,12 @@ Also, this is a super important command! This allows me to ssh into my server an
 If I did it right, I should be using the free tier of aws, and if something crazy happens they might charge me a little, but it should not be a whole lot of charges.
 
 Apparently we need to pay for a domain name!! How exciting 
+NS means name server records.
+SOA stands for start of authority records.
+It is generally recommended to not edit these records, because they are essential for the proper functioning of AWS servers.
+
+My website can be accessed through http://cosmic-8-ball.click Isn't that exciting!!!
+
 
 ## Caddy
 
