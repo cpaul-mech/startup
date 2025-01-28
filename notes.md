@@ -47,12 +47,14 @@ Every HTML element has attributes, two of the most common are id and class. Exam
 For common elements look https://github.com/webprogramming260/.github/blob/main/profile/html/introduction/introduction.md 
 The HTML structure is important because that way search engine crawlers can search through your website looking for the correct information.
 
-'''html Code for simple embedded pictures: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png" alt="wikipedia image, referenced." width="200" </img>'''
+'''html Code for simple embedded pictures: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png" alt="wikipedia image, referenced." width="200"> </img>'''
 
 the 'form' element has been useful in the past, and is often still traditionally used to denote something that requires user input.
 Finished up to the Checkbox deliverable checkpoint for my CS 260 homework.
 Also interesting, the 'canvas' HTML media element type, I wonder how to use that? It sounds interesting.
 You can include audio like so: '''html <audio controls src="testAudio.mp3"></audio>''' additional attributes include 'autoplay' and 'loop'.
+
+From the correct directory: I can run this command to connect to my webservice and rewrite some of the code. './deployFiles.sh -k ~/Documents/Chris_Documents/cpaulmechcs260webserver.pem -h cosmic-8-ball.click -s simon'
 
 ## CSS
 
