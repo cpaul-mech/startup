@@ -49,6 +49,8 @@ The HTML structure is important because that way search engine crawlers can sear
 
 '''html Code for simple embedded pictures: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png" alt="wikipedia image, referenced." width="200" </img>'''
 
+the 'form' element has been useful in the past, and is often still traditionally used to denote something that requires user input.
+Finished up to the Checkbox deliverable checkpoint for my CS 260 homework.
 ## CSS
 
 
