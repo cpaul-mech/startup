@@ -36,15 +36,18 @@ Also, because of the changes I made to the Caddyfile, my little website is secur
 ## HTML
 
 Codepen is a cool website that allows you to make cool website and save cool website. Not lose data. Mess around with ideas and stuff.
-Every HTML element has attributes, two of the most common are id and class. Example: '<p id="hello" class="greeting">Hello world</p>'
+Every HTML element has attributes, two of the most common are id and class. Example: 
+'''html
+<p id="hello" class="greeting">Hello world</p>
+'''
 
 ### Hyperlinks:
-'<a href="https://byu.edu">Go to the Y</a>' An example of a hyperlink syntax.\
+'''html <a href="https://byu.edu">Go to the Y</a>''' An example of a hyperlink syntax.\
 
 For common elements look https://github.com/webprogramming260/.github/blob/main/profile/html/introduction/introduction.md 
 The HTML structure is important because that way search engine crawlers can search through your website looking for the correct information.
 
-Code for simple embedded pictures: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png" alt="wikipedia image, referenced." width="200" </img>'
+'''html Code for simple embedded pictures: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png" alt="wikipedia image, referenced." width="200" </img>'''
 
 ## CSS
 
