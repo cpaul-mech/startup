@@ -51,6 +51,9 @@ The HTML structure is important because that way search engine crawlers can sear
 
 the 'form' element has been useful in the past, and is often still traditionally used to denote something that requires user input.
 Finished up to the Checkbox deliverable checkpoint for my CS 260 homework.
+Also interesting, the 'canvas' HTML media element type, I wonder how to use that? It sounds interesting.
+You can include audio like so: '''html <audio controls src="testAudio.mp3"></audio>''' additional attributes include 'autoplay' and 'loop'.
+
 ## CSS
 
 
