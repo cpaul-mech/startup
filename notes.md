@@ -57,10 +57,10 @@ You can include audio like so: '''html <audio controls src="testAudio.mp3"></aud
 From the correct directory: I can run this command to connect to my webservice and rewrite some of the code. './deployFiles.sh -k ~/Documents/Chris_Documents/cpaulmechcs260webserver.pem -h cosmic-8-ball.click -s simon'
 
 I think that my plan will be to create a 
-- home page which is the login page
-- Question and Answer page
-- History Page along with stats agrigation
-- About page
+- [x] home page which is the login page
+- [x] Question and Answer page
+- [x] History Page along with stats agrigation
+- [x] About page
 
 
 
