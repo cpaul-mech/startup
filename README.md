@@ -64,13 +64,13 @@ I am going to use the required technologies in the following ways.
 - **React** - Interaction with buttons and handling changes between web pages.
 - **Service** - Retrieves information about the weather, random cat facts and random dog facts.
 - **DB/Login** - stores information about the user's questions and answers. Also securely stores user information and verifies login information.
-- **WebSocket** - Displays a notification on the side bar whenever another user has joined the COSMIC 8-Ball.
+- **WebSocket** - Displays a notification on the side bar whenever another user has joined the COSMIC 8-Ball. Though I might allow players to provide answers to other players if that would be possible?
 
 ## 🚀 AWS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
+- [x] **Server deployed and accessible with custom domain name** - [My server link](https://cosmic-8-ball.click/).
 
 ## 🚀 HTML deliverable
 
