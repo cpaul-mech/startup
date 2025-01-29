@@ -76,15 +76,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** I added 4 html pages to my website. the obvious index.html, about.html, yourStats.html, questionAndAnswer.html
+- [x] **Proper HTML element usage** - I included all the necessary elements in my html pages, including heads and body sections, headers, footers, and main sections. I included forms where applicable, and images and so on.
+- [x] **Links** - I included links between each of the pages of my website, and I included external links in my about.html document.
+- [x] **Text** - I included text where possible and gave some brief descriptions which I will finish writing by later deliverables.
+- [x] **3rd party API placeholder** - I included a placeholder description on the questionAndAnswer.html page that will eventually be populated by random facts and other things.
+- [x] **Images** - I included a basic image on every page, along with some placeholder text because I need to finish creating some of the art that I will be uploading. 
+- [x] **Login placeholder** - I have completed a login portion on the main page of the website.
+- [x] **DB data placeholder** - I have included a table on the yourStats.html page that includes a placeholder table that will be populated by the database data i include.
+- [x] **WebSocket placeholder** - I have included a placeholder text describing how I will incorporate websocket through displaying the usernames of those people who have just received answers from the 8-ball as the current user is thinking of a question to ask.
 
 ## 🚀 CSS deliverable
 
