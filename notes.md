@@ -69,6 +69,9 @@ CSS code defines rules, that are comprised of a 'selector' that selects the elem
 ![CSS-rules](CSS_basic_syntax.png)
 
 There are multiple ways to include CSS into your html, but the way we will probably use is to use the HTML 'link' element to create a hyperlink reference to an external file containing the CSS rules. Such as this: '''<link rel="stylesheet" href="styles.css" />''' the link must appear in the 'head' element of the document. 
+The pseudo selector seems particularly interesting, I wonder if this is how most websites do the hover lightening effect when they write websites.
+
+Units Notes: 'em' is defined as a "multiplier of the width of the letter m in the parent's font" it seems like 'em' is a well used unit. Is that because modern websites allow you to resize the text, and therefore you would want to make the formatting dependent on the size of the font?
 
 
 ## React Part 1: Routing
