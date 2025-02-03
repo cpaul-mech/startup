@@ -72,7 +72,9 @@ There are multiple ways to include CSS into your html, but the way we will proba
 The pseudo selector seems particularly interesting, I wonder if this is how most websites do the hover lightening effect when they write websites.
 
 Units Notes: 'em' is defined as a "multiplier of the width of the letter m in the parent's font" it seems like 'em' is a well used unit. Is that because modern websites allow you to resize the text, and therefore you would want to make the formatting dependent on the size of the font?
+There are 4 major families of fonts, serif, sans-serif, fixed, and symbol. 
 
+Google offers free fonts that you can use without paying royalties. The easiest way to use Google fonts is to use a CSS import statement to reference the Google Font Service. This will automatcally generate the CSS for importing the font. 
 
 ## React Part 1: Routing
 
