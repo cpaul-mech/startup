@@ -76,6 +76,9 @@ There are 4 major families of fonts, serif, sans-serif, fixed, and symbol.
 
 Google offers free fonts that you can use without paying royalties. The easiest way to use Google fonts is to use a CSS import statement to reference the Google Font Service. This will automatcally generate the CSS for importing the font. 
 
+Here is my worked out solution to the CSS Practice assignment: https://codepen.io/cpaul-mech/pen/qEWGZJK
+
+
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
