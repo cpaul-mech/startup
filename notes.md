@@ -57,18 +57,18 @@ You can include audio like so: '''html <audio controls src="testAudio.mp3"></aud
 From the correct directory: I can run this command to connect to my webservice and rewrite some of the code. './deployFiles.sh -k ~/Documents/Chris_Documents/cpaulmechcs260webserver.pem -h cosmic-8-ball.click -s simon'
 
 I think that my plan will be to create the following pages.
+
 - [x] home page which is the login page
 - [x] Question and Answer page
 - [x] History Page along with stats agrigation
 - [x] About page
 
-
-
 ## CSS
+
 CSS code defines rules, that are comprised of a 'selector' that selects the elements to apply the rule to, and one or more 'declarations' that represent the 'property' to style with the given 'property value'.
 ![CSS-rules](CSS_basic_syntax.png)
 
-There are multiple ways to include CSS into your html, but the way we will probably use is to use the HTML 'link' element to create a hyperlink reference to an external file containing the CSS rules. Such as this: '''<link rel="stylesheet" href="styles.css" />''' the link must appear in the 'head' element of the document. 
+There are multiple ways to include CSS into your html, but the way we will probably use is to use the HTML 'link' element to create a hyperlink reference to an external file containing the CSS rules. Such as this: '''<link rel="stylesheet" href="styles.css" />''' the link must appear in the 'head' element of the document.
 The pseudo selector seems particularly interesting, I wonder if this is how most websites do the hover lightening effect when they write websites.
 
 Units Notes: 'em' is defined as a "multiplier of the width of the letter m in the parent's font" it seems like 'em' is a well used unit. Is that because modern websites allow you to resize the text, and therefore you would want to make the formatting dependent on the size of the font?
@@ -77,6 +77,11 @@ There are 4 major families of fonts, serif, sans-serif, fixed, and symbol.
 Google offers free fonts that you can use without paying royalties. The easiest way to use Google fonts is to use a CSS import statement to reference the Google Font Service. This will automatcally generate the CSS for importing the font. 
 
 Here is my worked out solution to the CSS Practice assignment: https://codepen.io/cpaul-mech/pen/qEWGZJK
+
+The 'float' css property moves an element to the right or the left of it's container element and allows inline elements to wrap around it.
+
+Use the '@media' selector allows me to grab the size and orientation of the screen that is viewing the display.
+For instance, with the '@media (orientation: portrait) {aside{display: none;}}' this will make the 'aside' element dissapear if the web page is viewed in portrait mode rather than normal mode.
 
 
 ## React Part 1: Routing
