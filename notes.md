@@ -83,7 +83,10 @@ The 'float' css property moves an element to the right or the left of it's conta
 Use the '@media' selector allows me to grab the size and orientation of the screen that is viewing the display.
 For instance, with the '@media (orientation: portrait) {aside{display: none;}}' this will make the 'aside' element dissapear if the web page is viewed in portrait mode rather than normal mode.
 
-
+The code 'html {
+  height: 100%;
+}' was the command I was missing to make sure that the web-page fills the screen. Might come in handy later. 
+Also I learned that when using 'flex' elements, one needs to specify in each children's rule set the 'display: flex;', 'flex-direction', 'justify-content', and 'align-items' choices.
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
