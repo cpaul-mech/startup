@@ -90,12 +90,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - Each of these sections has received attention to the coloration.
+- [x] **Navigation elements** - The navigation elements have gotten an overhaul, they're now much more visibly pleasing.
+- [x] **Responsive to window resizing** - Using flex and the bootstrap CSS framework, my website is very responsive to window resizing.
+- [x] **Application elements** -the application elements that I knew how I wanted to style, I did so. However, there are some elements that I could not decide on how to style, and those have been left as simple paragraphs for now. 
+- [x] **Application text content** I used the bootstrap framework, as well as a little bit of CSS to make sure that the text looked like it fit the rest of the deliverable.
+- [x] **Application images** - I drew one main image in procreate and included that throughout the website, though I would like to do a few more smaller scale images.
 
 ## 🚀 React part 1: Routing deliverable
 
