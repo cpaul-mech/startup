@@ -87,6 +87,8 @@ The code 'html {
   height: 100%;
 }' was the command I was missing to make sure that the web-page fills the screen. Might come in handy later. 
 Also I learned that when using 'flex' elements, one needs to specify in each children's rule set the 'display: flex;', 'flex-direction', 'justify-content', and 'align-items' choices.
+
+Bootstrap: You need to add the correct link thing into the html head element. That allows you to code bootstrap elements into your websites.
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
