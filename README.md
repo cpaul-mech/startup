@@ -90,7 +90,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **Header, footer, and main content body** - Each of these sections has received attention to the coloration.
+- [x] **Header, footer, and main content body** - Each of these sections has received attention to the coloration and placement. They are also responsive to sizing.
 - [x] **Navigation elements** - The navigation elements have gotten an overhaul, they're now much more visibly pleasing.
 - [x] **Responsive to window resizing** - Using flex and the bootstrap CSS framework, my website is very responsive to window resizing.
 - [x] **Application elements** -the application elements that I knew how I wanted to style, I did so. However, there are some elements that I could not decide on how to style, and those have been left as simple paragraphs for now. 
