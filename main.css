@@ -19,14 +19,6 @@ main {
     background-color: whitesmoke;
 }
 
-
-div img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-
 menu {
     flex: 1;
     display: flex;
@@ -43,6 +35,13 @@ menu .nav-item a{
 #eightBall {
     padding-right: 1em;
 }
+#eightBallImg {
+    padding-bottom: 2em;
+}
+div span {
+    opacity: 0.7;
+    font-style: italic;
+}
 footer {
     background-color: azure;
     flex-direction: row !important;
@@ -55,3 +54,18 @@ footer a {
     text-decoration: underline;
     padding-left: .23em;
 }
+button {
+    padding-top: .25em;
+}
+
+@media (max-height: 600px) {
+    header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    main {
+      flex: 1 100vh;
+    }
+  }
