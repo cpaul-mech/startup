@@ -89,6 +89,14 @@ The code 'html {
 Also I learned that when using 'flex' elements, one needs to specify in each children's rule set the 'display: flex;', 'flex-direction', 'justify-content', and 'align-items' choices.
 
 Bootstrap: You need to add the correct link thing into the html head element. That allows you to code bootstrap elements into your websites.
+
+## JavaScript
+How to insert javascript into html?
+1. **Script block**: Directly including it in the HTML within the content of a `<script>` element
+1. **External code**: Using the `src` attribute of the script element to reference an external JavaScript file.
+1. **Inline event attribute**: Putting JavaScript directly inline as part of an event attribute handler.
+
+Use the web browser debugger in order to see what the variables are during execution. You can also choose to print variables and stuff to the console window so that you cna read it off. Also in the Chrome debugger.
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
