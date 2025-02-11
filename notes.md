@@ -108,6 +108,15 @@ Use the web browser debugger in order to see what the variables are during execu
 make sure that when you run your code you're using `node.js` to run your code, like with the debugging tool through `F5` and not through the live server extension. 
 
 To configure `npm`, you must do something like this: `npm init` after navigating to the correct directory.
+
+Here is the step by step process:
+1. Create your project directory
+1. Initialize it for use with NPM by running `npm init -y`
+1. Make sure `.gitignore` file contains `node_modules`
+1. Install any desired packages with `npm install <package name here>`
+1. Add `require('<package name here>')` to your application's JavaScript
+1. Use the code the package provides in your JavaScript
+1. Run your code with `node index.js`
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
