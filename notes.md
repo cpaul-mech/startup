@@ -97,6 +97,8 @@ How to insert javascript into html?
 1. **Inline event attribute**: Putting JavaScript directly inline as part of an event attribute handler.
 
 Use the web browser debugger in order to see what the variables are during execution. You can also choose to print variables and stuff to the console window so that you cna read it off. Also in the Chrome debugger.
+
+make sure that when you run your code you're using 'node.js' to run your code, like with the debugging tool through 'F5' and not through the live server extension. 
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
