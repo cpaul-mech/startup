@@ -145,6 +145,12 @@ You reference normal html stuff with a lowercase letter. Declare all components 
 
 ## React Part 1: Routing
 
-React router is a way to make what once was multiple pages into one page. 
+React router is a way to make what once was multiple pages into one page. Interestingly, even though technically the page url hasn't changed when the user clicks on a "link", the forward and backwards buttons on the browser work as intened. Basically by using React Routing, page navigation speed is massively increased.
+
+In order to setup react router, there are three things you need to do:
+
+1. Setup your router
+1. Define your routes
+1. Handle Navigation
 
 ## React Part 2: Reactivity
