@@ -79,7 +79,7 @@ I think that my plan will be to create the following pages.
 ## CSS
 
 CSS code defines rules, that are comprised of a `selector` that selects the elements to apply the rule to, and one or more `declarations` that represent the `property` to style with the given `property value`.
-![CSS-rules](CSS_basic_syntax.png)
+![CSS-rules](graphics/CSS_basic_syntax.png)
 
 There are multiple ways to include CSS into your html, but the way we will probably use is to use the HTML `link` element to create a hyperlink reference to an external file containing the CSS rules. Such as this: ```<link rel="stylesheet" href="styles.css" />``` the link must appear in the `head` element of the document.
 The pseudo selector seems particularly interesting, I wonder if this is how most websites do the hover lightening effect when they write websites.
