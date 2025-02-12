@@ -135,6 +135,14 @@ React and `.jsx` files use components a lot of the time. They style their compon
 
 State, reactive to changes in the state of elements, or propreties. It doesn't know when the state within your react function component actually changes. so in ordr to inject itself in there and know whne those are happening they use what's called a `State hook`
 
+"A react component is a javascript function that you can sprinkle with markup" [react.dev website](https://react.dev/learn/your-first-component)
+
+React components Must start with a capitol letter or they will not work.
+
+You reference normal html stuff with a lowercase letter. Declare all components at the top level of the .jsx file, you cannot nest the declarations. When a child component needs some data from a parent, then you must "pass it by props" instead of nesting definitions.
+
+`export default function` are super important keywords in react.
+
 ## React Part 1: Routing
 
 ## React Part 2: Reactivity
