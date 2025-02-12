@@ -4,7 +4,6 @@
 
 This application is a simple magic 8 ball responder, wherein a user types in their question and is given a simple answer. It incorporates all the usual 8-ball responses, but also throws in some random ones that may surprise you. It requires a login, so that it can store the number of times you received a certain response, and lets you know whether someone else has entered the 8-ball website.
 
-
 <!-- > [!NOTE]
 >  This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
 
@@ -27,14 +26,14 @@ I checked the box `[x]` and added a description for things I completed.
 
 ### Elevator pitch
 
-Do you feel paralyzed by choice in this increasingly consumer focused world? Do you need an excuse to not work on homework? Do you need to know whether a certain someone likes you? Well, the magic 8 ball waits to answer these pressing questions and bring you completely relevant and truthful advice. 
+Do you feel paralyzed by choice in this increasingly consumer focused world? Do you need an excuse to not work on homework? Do you need to know whether a certain someone likes you? Well, the magic 8 ball waits to answer these pressing questions and bring you completely relevant and truthful advice.
 
 But wait there's more, this 8 ball isn't just your everyday, run-of-the-mill magic 8 ball, it is more accurately named the COSMIC 8-Ball, on account of it's cosmically large set of answers (including weather reports and random cat facts).
 
 ### Design
-![Login Page](Login_page_chris_website.png)
-![Design image](Chris_Website_layout.png)
 
+![Login Page](graphics/Login_page_chris_website.png)
+![Design image](graphics/Chris_Website_layout.png)
 
 <!-- 
 ```mermaid
@@ -81,7 +80,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Links** - I included links between each of the pages of my website, and I included external links in my about.html document.
 - [x] **Text** - I included text where possible and gave some brief descriptions which I will finish writing by later deliverables.
 - [x] **3rd party API placeholder** - I included a placeholder description on the questionAndAnswer.html page that will eventually be populated by random facts and other things.
-- [x] **Images** - I included a basic image on every page, along with some placeholder text because I need to finish creating some of the art that I will be uploading. 
+- [x] **Images** - I included a basic image on every page, along with some placeholder text because I need to finish creating some of the art that I will be uploading.
 - [x] **Login placeholder** - I have completed a login portion on the main page of the website.
 - [x] **DB data placeholder** - I have included a table on the yourStats.html page that includes a placeholder table that will be populated by the database data i include.
 - [x] **WebSocket placeholder** - I have included a placeholder text describing how I will incorporate websocket through displaying the usernames of those people who have just received answers from the 8-ball as the current user is thinking of a question to ask.
@@ -93,7 +92,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Header, footer, and main content body** - Each of these sections has received attention to the coloration and placement. They are also responsive to sizing.
 - [x] **Navigation elements** - The navigation elements have gotten an overhaul, they're now much more visibly pleasing.
 - [x] **Responsive to window resizing** - Using flex and the bootstrap CSS framework, my website is very responsive to window resizing.
-- [x] **Application elements** -the application elements that I knew how I wanted to style, I did so. However, there are some elements that I could not decide on how to style, and those have been left as simple paragraphs for now. 
+- [x] **Application elements** -the application elements that I knew how I wanted to style, I did so. However, there are some elements that I could not decide on how to style, and those have been left as simple paragraphs for now.
 - [x] **Application text content** I used the bootstrap framework, as well as a little bit of CSS to make sure that the text looked like it fit the rest of the deliverable.
 - [x] **Application images** - I drew one main image in procreate and included that throughout the website, though I would like to do a few more smaller scale images.
 

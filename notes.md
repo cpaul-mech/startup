@@ -145,4 +145,6 @@ You reference normal html stuff with a lowercase letter. Declare all components 
 
 ## React Part 1: Routing
 
+React router is a way to make what once was multiple pages into one page. 
+
 ## React Part 2: Reactivity
