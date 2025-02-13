@@ -157,6 +157,24 @@ In addition to properties, a component can have an Internal state. component sta
 
 The syntax for javascript is really weird and will probably take a while to get used to, because everything is interrelated.
 
-the `npm run dev` command didn't work for me at all. I wonder why that is the case...? Javascript code is still really confusing, so it's gonna be greek to me for a while. 
+the `npm run dev` command didn't work for me at all. I wonder why that is the case...? Javascript code is still really confusing, so it's gonna be greek to me for a while. The dev command is enabled through the package.json file, under the "scripts" section, using the line: `"dev": "vite",` this allows the project to run in the development environment and display on the browser, while being updated every time the user makes any changes.
+
+I also learned that the only reason that running the `npm run build` packages up the file for easy deployment to the server. I do wonder how we're going to manage that in the next little bit.
+
+I wonder if there is a way to modify my deployfiles.sh to ignore the examplesAndMisc directory.
+
+Steps to convert repository to a React application:
+
+1. Install and configure Vite
+1. Reorganize the code
+1. Convert to React Bootstrap
+1. Enable React
+1. Create app component
+1. Create view components
+1. Create the router
+1. Convert HTML to React components
+1. Replace deployment script
+
+You can use `npm install bootstrap react-bootstrap` to import a package that will let you treat bootstrap widgets as a React component.
 
 ## React Part 2: Reactivity
