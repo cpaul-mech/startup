@@ -153,7 +153,7 @@ In order to setup react router, there are three things you need to do:
 1. Define your routes
 1. Handle Navigation
 
-In addition to properties, a component can have an Internal state. component state is created by calling the `React.useState` hook function. This function returns a variable that that contains the current state and a function to update that state. 
+In addition to properties, a component can have an Internal state. component state is created by calling the `React.useState` hook function. This function returns a variable that that contains the current state and a function to update that state.cd
 
 The syntax for javascript is really weird and will probably take a while to get used to, because everything is interrelated.
 
