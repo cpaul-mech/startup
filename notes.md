@@ -157,4 +157,6 @@ In addition to properties, a component can have an Internal state. component sta
 
 The syntax for javascript is really weird and will probably take a while to get used to, because everything is interrelated.
 
+the `npm run dev` command didn't work for me at all. I wonder why that is the case...? Javascript code is still really confusing, so it's gonna be greek to me for a while. 
+
 ## React Part 2: Reactivity
