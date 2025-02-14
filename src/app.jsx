@@ -13,7 +13,7 @@ export default function App() {
         <div className = "body">
             <header className='container-fluid'>
                 {/* <!-- Navigation elements --> */}
-                <nav className='navbar fixed-top'>
+                <nav className='navbar'>
                     {/* <!-- Menu is a semantic alternative to <ul> that represents an interaction --> */}
                     <menu className="navbar-nav">
                         <li className="nav-item" id="eightBall"><NavLink to="">🔮</NavLink></li>
