@@ -100,7 +100,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **Bundled using Vite** - I installed Vite and bundled my web application.
+- [x] **Bundled using Vite** - I installed Vite and bundled my web application according to the structure that Vite expects.
 - [x] **Components** - I create the proper references to the stubbed components as `.jsx` files, and then made sure they worked.
 - [x] **Router** - The routing between login and other components does work, and it works quite well!
 
