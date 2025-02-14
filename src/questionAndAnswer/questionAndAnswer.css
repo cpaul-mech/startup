@@ -1,14 +1,4 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-width: 375px;
-}
 
-header {
-    container: fluid;
-    background-color: rgb(129, 129, 129);
-    flex: 0 70px;
-}
 
 main {
     flex: 1 calc(100vh - 90px);
