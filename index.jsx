@@ -1,7 +1,6 @@
-const i = 3;
-const list = (
-  <ol class="big">
-    <li>Item {i}</li>
-    <li>Item {3 + i}</li>
-  </ol>
-);
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './src/app';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
