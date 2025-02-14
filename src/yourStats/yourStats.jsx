@@ -9,10 +9,13 @@ export function YourStats() {
         <h3>USERNAME has asked: ## questions of the 8 ball</h3>
         <h3>USERNAME has received ## different types of wisdom</h3>
             <table className="table-bordered">
-                <tr>
+                <thead>
+                    <tr>
                     <th>Your questions</th>
                     <th>Answers</th>
-                </tr>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>What should I do tomorrow</td>
                     <td>Yes.</td>
@@ -21,6 +24,7 @@ export function YourStats() {
                     <td>Will I end up getting a job?</td>
                     <td>A rocket has to travel at around 11.2 km/s to escape earth's gravity.</td>
                 </tr>
+                </tbody>
             </table>
     </main>
   );
