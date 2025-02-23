@@ -179,4 +179,8 @@ You can use `npm install bootstrap react-bootstrap` to import a package that wil
 
 ## React Part 2: Reactivity
 
-Javascript functions can be run immediately if you wrap them in parenthesis. That's so intereresting. You can also try write an anonymous function that don't have a name.
+Javascript functions can be run immediately if you wrap them in parenthesis. That's so intereresting. You can also try write an anonymous function that don't have a name. 
+
+Setting state with the function provided by the React useState function is Asynchronous.
+
+The "addEventListener" function seems like it will be useful during my project. Look into that more.
