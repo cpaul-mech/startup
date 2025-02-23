@@ -178,3 +178,5 @@ Steps to convert repository to a React application:
 You can use `npm install bootstrap react-bootstrap` to import a package that will let you treat bootstrap widgets as a React component.
 
 ## React Part 2: Reactivity
+
+Javascript functions can be run immediately if you wrap them in parenthesis. That's so intereresting. You can also try write an anonymous function that don't have a name.
