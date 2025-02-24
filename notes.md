@@ -183,4 +183,23 @@ Javascript functions can be run immediately if you wrap them in parenthesis. Tha
 
 Setting state with the function provided by the React useState function is Asynchronous.
 
-The "addEventListener" function seems like it will be useful during my project. Look into that more.
+The "addEventListener" function seems like it will be useful during my project. Look into that more. 
+
+Example of Javascript function:
+
+```javascript
+function testAll(inputArray, testerFunc) {
+    for (i of inputArray.values()) {
+        if(testerFunc(i)){
+            continue;
+        }else{
+            return false;
+        }
+    }
+    return true;
+}
+const sillyNames = ["goob", "nextName", "Muskypants"]
+const result = testAll(sillyNames, (s)=>{return(s.length>3)})
+
+console.log(result);
+```
