@@ -226,4 +226,21 @@ Personally, I will most likely be using javascript classes more than javascript 
 
 ### Timeout and interval
 
-the function `setTimeout(() => console.log('time is up'), 2000);` is like setting a one off interrupt for later with javaScript code. The function is executed asynchronously as soon as `2000` miliseconds have passed. And if you want to setup a timerInterrupt, then this function will help you out. `setInterval(() => console.log('do something'), 1000);`. This does basically waht I think it should. You can then stop the timer interrupt by calling the `setTimeout(previouslySetIntervalObj)` function on the previously created setInterval object. 
+the function `setTimeout(() => console.log('time is up'), 2000);` is like setting a one off interrupt for later with javaScript code. The function is executed asynchronously as soon as `2000` miliseconds have passed. And if you want to setup a timerInterrupt, then this function will help you out. `setInterval(() => console.log('do something'), 1000);`. This does basically waht I think it should. You can then stop the timer interrupt by calling the `setTimeout(previouslySetIntervalObj)` function on the previously created setInterval object.
+
+### How to JSON parse and retreive
+
+```javascript
+const obj = { a: 2, b: 'crockford', c: undefined };
+const json = JSON.stringify(obj);
+const objFromJson = JSON.parse(json);
+
+console.log(obj, json, objFromJson);
+
+// OUTPUT:
+// {a: 2, b: 'crockford', c: undefined}
+// {"a":2, "b":"crockford"}
+// {a: 2, b: 'crockford'}
+```
+
+One further note about JSON, you can now use e notation to use scientific notation. There is no version number for JSON. You can always depend on JSON.
