@@ -243,4 +243,8 @@ console.log(obj, json, objFromJson);
 // {a: 2, b: 'crockford'}
 ```
 
-One further note about JSON, you can now use e notation to use scientific notation. There is no version number for JSON. You can always depend on JSON.
+One further note about JSON, you can now use e notation to use scientific notation. There is no version number for JSON. You can always I depend on JSON. Personally, I will most likely use JSON to encode the data that I will include in my Database Layer.
+
+### Local Storage
+
+There are four main functions that you can use with LocalStorage, `setItem(name, item)`, `getItem(name)`, `removeItem(name)` and `clear()` I can see this as a simple way to create some localstorage of data that I can then use to display the username. You can only include data with type `string``number` or `boolean`.
