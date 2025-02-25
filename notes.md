@@ -204,6 +204,8 @@ const result = testAll(sillyNames, (s)=>{return(s.length>3)})
 console.log(result);
 ```
 
+### JavaScript Objects and Classes
+
 Javascript objects are super weird, they're basically like dictionaries. For instance, this is a javascript object, specifically the obj-literal syntax.
 
 ```javascript
@@ -217,4 +219,11 @@ const obj = {
   },
 };
 ```
+
 You can create methods on an object, so that it can print it's internal stuff like a python script.
+
+Personally, I will most likely be using javascript classes more than javascript objects. Because it is less of a shorthand and declares more what you are trying to do with your objects. In javascript classes, you can make properties of functions private by using prefixing them with a `#`.
+
+### Timeout and interval
+
+the function `setTimeout(() => console.log('time is up'), 2000);` is like setting a one off interrupt for later with javaScript code. The function is executed asynchronously as soon as `2000` miliseconds have passed. And if you want to setup a timerInterrupt, then this function will help you out. `setInterval(() => console.log('do something'), 1000);`. This does basically waht I think it should. You can then stop the timer interrupt by calling the `setTimeout(previouslySetIntervalObj)` function on the previously created setInterval object. 
