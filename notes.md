@@ -247,4 +247,4 @@ One further note about JSON, you can now use e notation to use scientific notati
 
 ### Local Storage
 
-There are four main functions that you can use with LocalStorage, `setItem(name, item)`, `getItem(name)`, `removeItem(name)` and `clear()` I can see this as a simple way to create some localstorage of data that I can then use to display the username. You can only include data with type `string``number` or `boolean`.
+There are four main functions that you can use with LocalStorage, `setItem(name, item)`, `getItem(name)`, `removeItem(name)` and `clear()` I can see this as a simple way to create some localstorage of data that I can then use to display the username. You can only include data with type `string``number` or `boolean`. NOTE: open the `Application` tab of the dev tools and select `Storage > Local Storage` and then your domain name. With the dev tools you can add, view, update, and delete any local storage values.
