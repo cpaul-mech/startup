@@ -179,11 +179,11 @@ You can use `npm install bootstrap react-bootstrap` to import a package that wil
 
 ## React Part 2: Reactivity
 
-Javascript functions can be run immediately if you wrap them in parenthesis. That's so intereresting. You can also try write an anonymous function that don't have a name. 
+Javascript functions can be run immediately if you wrap them in parenthesis. That's so intereresting. You can also try write an anonymous function that don't have a name.
 
 Setting state with the function provided by the React useState function is Asynchronous.
 
-The "addEventListener" function seems like it will be useful during my project. Look into that more. 
+The "addEventListener" function seems like it will be useful during my project. Look into that more.
 
 Example of Javascript function:
 
@@ -248,3 +248,13 @@ One further note about JSON, you can now use e notation to use scientific notati
 ### Local Storage
 
 There are four main functions that you can use with LocalStorage, `setItem(name, item)`, `getItem(name)`, `removeItem(name)` and `clear()` I can see this as a simple way to create some localstorage of data that I can then use to display the username. You can only include data with type `string``number` or `boolean`. NOTE: open the `Application` tab of the dev tools and select `Storage > Local Storage` and then your domain name. With the dev tools you can add, view, update, and delete any local storage values.
+
+### Destructuring, SUPER IMPORTANT
+
+Okay this destructuring thing is pretty crazy, but it's kinda like getting multiple outputs from a python function, only you can do it with arrays, which is wild... i'm not exactly sure what to do about that. Anyways, the interesting thing is that React uses destructuring extensively. A brief list of things you can do with Destrucuting is as follows:
+
+- Selecting items with keys, or in order, from an object
+- Then you can use them as you see fit.
+- You can also specify properties that you want to pull from the source object.
+- Map names to new variables when you pull them from an object.
+- Default values can be provided for missing names.
