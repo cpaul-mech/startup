@@ -203,3 +203,18 @@ const result = testAll(sillyNames, (s)=>{return(s.length>3)})
 
 console.log(result);
 ```
+
+Javascript objects are super weird, they're basically like dictionaries. For instance, this is a javascript object, specifically the obj-literal syntax.
+
+```javascript
+const obj = {
+  a: 3,
+  b: 'fish',
+  c: [1, true, 'dog'],
+  d: { e: false },
+  f: function () {
+    return 'hello';
+  },
+};
+```
+You can create methods on an object, so that it can print it's internal stuff like a python script.
