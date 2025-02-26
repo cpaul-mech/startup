@@ -260,3 +260,7 @@ Okay this destructuring thing is pretty crazy, but it's kinda like getting multi
 - You can also specify properties that you want to pull from the source object.
 - Map names to new variables when you pull them from an object.
 - Default values can be provided for missing names.
+
+### React Hooks
+
+the `useEffect` hook allows you to represent lifecycle events.
