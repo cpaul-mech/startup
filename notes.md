@@ -177,7 +177,7 @@ Steps to convert repository to a React application:
 
 You can use `npm install bootstrap react-bootstrap` to import a package that will let you treat bootstrap widgets as a React component.
 
-> [!IMPORTANT] Use this command to update the code for the web server: `./deployReact.sh -k ~/Documents/Chris_Documents/cpaulmechcs260webserver.pem -h cosmic-8-ball.click -s simon` 
+> [!IMPORTANT] Use this command to update the code for the web server: `./deployReact.sh -k ~/Documents/Chris_Documents/cpaulmechcs260webserver.pem -h cosmic-8-ball.click -s simon`
 
 ## React Part 2: Reactivity
 
