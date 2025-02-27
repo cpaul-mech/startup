@@ -266,3 +266,7 @@ Okay this destructuring thing is pretty crazy, but it's kinda like getting multi
 ### React Hooks
 
 the `useEffect` hook allows you to represent lifecycle events.
+
+### SimonReact
+
+I need to be sure to include similar login and logout functionality to my startup code.
