@@ -143,7 +143,7 @@ You reference normal html stuff with a lowercase letter. Declare all components 
 
 `export default function` are super important keywords in react.
 
-> [!IMPORTANT] the `useState` hook, like in this: `const [count, updateCount] = React.useState(initialCount);`, is using destructuring to take a handle to the current state of a React component, as well as link it to a function that will be called when React realizes that this component must be updated.
+> [!IMPORTANT] the `useState` hook, like in this: `const [count, updateCount] = React.useState(initialCount);`, is using destructuring to take a handle to the current state of a React component, as well as link it to a function that will be called when React realizes that this component must be updated. See [here](https://codepen.io/cpaul-mech/pen/GgRNEPa?editors=0010) for a good example of one I changed to understand where all the different variables go.
 
 ## React Part 1: Routing
 
