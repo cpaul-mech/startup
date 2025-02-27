@@ -269,4 +269,4 @@ the `useEffect` hook allows you to represent lifecycle events.
 
 ### SimonReact
 
-I need to be sure to include similar login and logout functionality to my startup code.
+I need to be sure to include similar login and logout functionality to my startup code. I think that the Lifting State Up react model is very interesting!!
