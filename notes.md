@@ -143,6 +143,8 @@ You reference normal html stuff with a lowercase letter. Declare all components 
 
 `export default function` are super important keywords in react.
 
+> [!IMPORTANT] the `useState` hook, like in this: `const [count, updateCount] = React.useState(initialCount);`, is using destructuring to take a handle to the current state of a React component, as well as link it to a function that will be called when React realizes that this component must be updated.
+
 ## React Part 1: Routing
 
 React router is a way to make what once was multiple pages into one page. Interestingly, even though technically the page url hasn't changed when the user clicks on a "link", the forward and backwards buttons on the browser work as intened. Basically by using React Routing, page navigation speed is massively increased.
