@@ -15,6 +15,10 @@ export function QuestionAndAnswer() {
         const randomIndex = Math.floor(Math.random()*array.length)
         return array[randomIndex]
     }
+
+    function handleInputChange(event) {
+        setQuestion(event.target.value);
+    }
     
 
     const handleKeyPress = (event) => {
@@ -24,6 +28,8 @@ export function QuestionAndAnswer() {
             const answer = getRandomAnswer(standInAnswers);
             setAnswerText(answer);
             saveQA(question, answer);
+            console.log({question}, {answer})
+            setQuestion("");
             //need to display the answer here!
         }
     }
@@ -32,7 +38,7 @@ export function QuestionAndAnswer() {
         if(answerText === ""){
             return <h3>The Cosmic 8 Ball will respond below:</h3>
         }else {
-            return <p>The answer is: {answerText}</p>
+            return <h4>The answer is: {answerText}</h4>
         }
     }
 
@@ -42,10 +48,10 @@ export function QuestionAndAnswer() {
         <img id="eightBallImgLooming" src="Chris_Cosmic_8_Ball_looming.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
             width="800"></img>
         <h2>Ask, {localStorage.getItem('userName')}, and you shall receive your answer</h2>
-        <form method="get">
+        <form onSubmit={(e) => e.preventDefault()}>
             {/* <!-- #TODO: fill out what this does with react and javascript. --> */}
             <div className="input-group mb-3">
-                <input className="form-control" id="UserQuestion" type-="text" placeholder="Ask your Question" onKeyUp={handleKeyPress} />
+                <input className="form-control" id="UserQuestion" type-="text" value={question} placeholder="Ask your Question" onChange={handleInputChange} onKeyUp={handleKeyPress} />
             </div>
         </form>
         <FormatAnswer></FormatAnswer>
