@@ -6,8 +6,8 @@ export function YourStats() {
     <main className="container-fluid">
         <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
             width="100"></img>
-        <h3>USERNAME has asked: ## questions of the 8 ball</h3>
-        <h3>USERNAME has received ## different types of wisdom</h3>
+        <h3>{localStorage.getItem('userName')} has asked: ## questions of the 8 ball</h3>
+        <h3>{localStorage.getItem('userName')} has received ## different types of wisdom</h3>
             <table className="table-bordered">
                 <thead>
                     <tr>

@@ -20,6 +20,7 @@ export function Unauthenticated(props) {
     }
 
     return (
+        <>
         <div>
             <h1 id="Welcome_statement">Welcome to the COSMIC 8 BALL
                 <span>🔮</span>
@@ -38,5 +39,6 @@ export function Unauthenticated(props) {
                 <Button type="submit" className="btn btn-secondary" onClick={()=>createUser()} disabled={!userName || !password}>Create</Button>
             <MessageDialog message = {displayError} onHide={()=>setDisplayError(null)}></MessageDialog>
         </div>
+        </>
     );
 }
