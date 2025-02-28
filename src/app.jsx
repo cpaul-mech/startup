@@ -8,7 +8,7 @@ import { QuestionAndAnswer } from './questionAndAnswer/questionAndAnswer';
 import { YourStats } from './yourStats/yourStats';
 import { AuthState } from './login/authState';
 
-export default function App() {
+function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
     const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
     const [authState, setAuthState] = React.useState(currentAuthState);
@@ -66,3 +66,5 @@ export default function App() {
 function NotFound() {
     return <main className="container-fluid bg-secondary text-center">404: Return to sender. Address unknown.</main>;
 }
+
+export default App;
