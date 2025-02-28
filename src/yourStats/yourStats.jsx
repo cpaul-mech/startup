@@ -2,16 +2,55 @@ import React from 'react';
 import './yourStats.css';
 
 export function YourStats() {
+    const [qaList, setQAList] = React.useState([]);
+
+    React.useEffect(()=> {
+        const qaText = localStorage.getItem('qaList');
+        if(qaText) {
+            setQAList(JSON.parse(qaText))
+        }
+    }, [])
+
+    const qaRows = [];
+    if(qaList.length) {
+        for(const [i, qa] of qaList.entries()){
+            qaRows.push(
+                <tr key={i}>
+                    <td>{qa.question}</td>
+                    <td>{qa.answer}</td>                    
+                </tr>
+            )
+        }
+    } else {
+        qaRows.push(
+            <tr key='0'>
+                <td colSpan='2'>Ask your first question!</td>
+            </tr>
+        );
+    }
+
     function calcNumQuestions(){
-        
+        if(qaList.length){
+            return qaList.length;
+        }else{
+            return 0;
+        }
+    }
+
+    function calcNumAnswers(){
+        if(qaList.length) {
+            return qaList.length;
+        }else {
+            return 0;
+        }
     }
 
   return (
     <main className="container-fluid">
-        <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
+        <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball smaller"
             width="100"></img>
-        <h3>{localStorage.getItem('userName')} has asked: ## questions of the 8 ball</h3>
-        <h3>{localStorage.getItem('userName')} has received ## different types of wisdom</h3>
+        <h3>{localStorage.getItem('userName')} has asked: {calcNumQuestions()} questions of the 8 ball</h3>
+        <h3>{localStorage.getItem('userName')} has received: {calcNumAnswers()} different types of wisdom</h3>
             <table className="table-bordered">
                 <thead>
                     <tr>
@@ -19,15 +58,7 @@ export function YourStats() {
                     <th>Answers</th>
                     </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>What should I do tomorrow</td>
-                    <td>Yes.</td>
-                </tr>
-                <tr>
-                    <td>Will I end up getting a job?</td>
-                    <td>A rocket has to travel at around 11.2 km/s to escape earth's gravity.</td>
-                </tr>
+                <tbody id='qaList'>{qaRows}
                 </tbody>
             </table>
     </main>
