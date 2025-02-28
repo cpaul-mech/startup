@@ -37,7 +37,7 @@ export function QuestionAndAnswer() {
 
     function FormatAnswer() {
         if(answerText === ""){
-            return <h3>The Cosmic 8 Ball will respond below:</h3>
+            return <h3>The Cosmic 8 Ball will respond here</h3>
         }else {
             return <h4>The answer is: {answerText}</h4>
         }
