@@ -108,8 +108,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - I completed all the functionality I promised in the original deliverable. Questions and random answers work, though future updates will implement calls to external api for random answers including images. 
+- [x] **Hooks** - I added all necessary hooks and implemented all functionality.
 
 ## 🚀 Service deliverable
 
