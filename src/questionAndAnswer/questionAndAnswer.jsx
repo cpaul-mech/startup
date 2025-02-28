@@ -28,7 +28,7 @@ export function QuestionAndAnswer() {
         }
     }
 
-    function formatAnswer() {
+    function FormatAnswer() {
         if(answerText === ""){
             return <h3>The Cosmic 8 Ball will respond below:</h3>
         }else {
@@ -48,7 +48,7 @@ export function QuestionAndAnswer() {
                 <input className="form-control" id="UserQuestion" type-="text" placeholder="Ask your Question" onKeyUp={handleKeyPress} />
             </div>
         </form>
-        <formatAnswer></formatAnswer>
+        <FormatAnswer></FormatAnswer>
     </main>
   );
 }
