@@ -30,17 +30,31 @@ export function YourStats() {
     }
 
     function calcNumQuestions(){
+        let uniqueQuestions = [];
         if(qaList.length){
-            return qaList.length;
+            for (const [i, qa] of qaList.entries()) {
+                //now I need to check it against a list of entries that 
+                if(!uniqueQuestions.includes(qa.question)){
+                    uniqueQuestions.push(qa.question);
+                }
+            }
+            return uniqueQuestions.length;
         }else{
             return 0;
         }
     }
 
     function calcNumAnswers(){
-        if(qaList.length) {
-            return qaList.length;
-        }else {
+        let uniqueAnswers = [];
+        if(qaList.length){
+            for (const [i, qa] of qaList.entries()) {
+                //now I need to check it against a list of entries that 
+                if(!uniqueAnswers.includes(qa.answer)){
+                    uniqueAnswers.push(qa.answer);
+                }
+            }
+            return uniqueAnswers.length;
+        }else{
             return 0;
         }
     }
@@ -49,7 +63,7 @@ export function YourStats() {
     <main className="container-fluid">
         <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball smaller"
             width="100"></img>
-        <h3>{localStorage.getItem('userName')} has asked: {calcNumQuestions()} questions of the 8 ball</h3>
+        <h3>{localStorage.getItem('userName')} has asked: {calcNumQuestions()} unique questions of the 8 ball</h3>
         <h3>{localStorage.getItem('userName')} has received: {calcNumAnswers()} different types of wisdom</h3>
             <table className="table-bordered">
                 <thead>
