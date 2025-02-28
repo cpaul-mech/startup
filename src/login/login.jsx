@@ -2,30 +2,26 @@ import React from 'react';
 
 import { AuthState } from './authState';
 import { Authenticated } from './authenticated';
+import { Unauthenticated } from './unauthenticated';
 
 
 export function Login({ userName, authState, onAuthChange }) {
     return (
         <main>
-
-            <h1 id="Welcome_statement">Welcome to the COSMIC 8 BALL
-                <span>🔮</span>
-                {/* <!-- Some kind of Interesting Graphic of a Cosmic 8 Ball --> */}
-            </h1>
-            <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic-8 Ball graphic"
-                width="500"></img>
-            <h1>The COSMIC 8 Ball Needs No Introduction</h1>
-            <h2>But you do. Please login below.</h2>
-            <form method="get" action="questionAndAnswer.html">
-                <div className="input-group mb-3">
-                    <input id="emailInput" className="form-control" type="text" placeholder="your@email.com" />
-                </div>
-                <div className="input-group mb-3">
-                    <input id="passwordInput" className="form-control" type="password" placeholder="password" />
-                </div>
-                <button type="submit" className="btn btn-primary">Login</button>
-                <button type="submit" className="btn btn-secondary">Create</button>
-            </form>
+            <div>
+                {authState !== AuthState.Unknown}
+                {authState === AuthState.Authenticated && (
+                    <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
+                )}
+                {authState === AuthState.Unauthenticated && (
+                    <Unauthenticated
+                        userName={userName}
+                        onLogin={(loginUserName) => {
+                            onAuthChange(loginUserName, AuthState.Authenticated)
+                        }} 
+                    />
+                )}
+            </div>
         </main>
     );
 }
