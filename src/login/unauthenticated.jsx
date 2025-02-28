@@ -23,7 +23,6 @@ export function Unauthenticated(props) {
 
             <h1 id="Welcome_statement">Welcome to the COSMIC 8 BALL
                 <span>🔮</span>
-                {/* <!-- Some kind of Interesting Graphic of a Cosmic 8 Ball --> */}
             </h1>
             <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic-8 Ball graphic"
                 width="500"></img>
