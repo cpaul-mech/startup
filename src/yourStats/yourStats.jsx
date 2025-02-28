@@ -2,6 +2,10 @@ import React from 'react';
 import './yourStats.css';
 
 export function YourStats() {
+    function calcNumQuestions(){
+        
+    }
+
   return (
     <main className="container-fluid">
         <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
