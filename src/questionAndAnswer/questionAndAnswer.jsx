@@ -9,6 +9,7 @@ export function QuestionAndAnswer() {
 
     async function saveQA(question, answer) {
         const newQA = {question: question, answer: answer}
+        updateQALocal(newQA);
     }
 
     function getRandomAnswer (array) {
@@ -40,6 +41,16 @@ export function QuestionAndAnswer() {
         }else {
             return <h4>The answer is: {answerText}</h4>
         }
+    }
+
+    function updateQALocal(newQA) {
+        let qa = [];
+        const qaString = localStorage.getItem('qaList');
+        if(qaString) {
+            qa = JSON.parse(qaString);
+        }
+        qa.push(newQA);
+        localStorage.setItem('qaList',JSON.stringify(qa))
     }
 
   return (
