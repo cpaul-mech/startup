@@ -270,3 +270,7 @@ the `useEffect` hook allows you to represent lifecycle events.
 ### SimonReact
 
 I need to be sure to include similar login and logout functionality to my startup code. I think that the Lifting State Up react model is very interesting!!
+
+### Promise Functions
+
+Promises are a way to not block your code by creating a Promise object, then having it run a function in the background while other functions below the declaration of the promise function can continue running as normal.
