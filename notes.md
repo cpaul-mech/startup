@@ -273,4 +273,4 @@ I need to be sure to include similar login and logout functionality to my startu
 
 ### Promise Functions
 
-Promises are a way to not block your code by creating a Promise object, then having it run a function in the background while other functions below the declaration of the promise function can continue running as normal.
+Promises are a way to not block your code by creating a Promise object, then having it run a function in the background while other functions below the declaration of the promise function can continue running as normal. We have to control what state the promise is in, whether that is the `pending`, `resolved` or `rejected`. This means that we need to catch and hang the errors. We can also use the `then`, `catch` and `finally` to execute things after the promise is either completed (with the results of the promise output), failed, or after it has finished completion and the `then` function handle has been run.
