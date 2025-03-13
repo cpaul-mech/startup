@@ -277,7 +277,7 @@ Promises are a way to not block your code by creating a Promise object, then hav
 
 ### Web services
 
-Our web browser gets things from the EC2 web server, which is called the backend, but now, we can use the backend to do things like get external data, access and store user data in an external server, and so on. 
+Our web browser gets things from the EC2 web server, which is called the backend, but now, we can use the backend to do things like get external data, access and store user data in an external server, and so on.
 
 Parts of a URL: `<scheme>://<domain name>:<port>/<path>?<parameters>#<anchor>`.
 
@@ -304,6 +304,6 @@ fetch(url2)
 })
 ```
 
-Express is super important and stuff. use an Express `app` object that supports all the methods we need!! Like get, post, delete and other things. This allows us to handle the .get method, and then return a response using the `res.send({})` syntax. 
+Express is super important and stuff. use an Express `app` object that supports all the methods we need!! Like get, post, delete and other things. This allows us to handle the .get method, and then return a response using the `res.send({})` syntax.
 
 MiddleWare is a little bit strange sounding. I don't really like it. Represents 'componentized pieces of functionality.' Also, the next handler or function is tripping me up a little. Oh, so the next keyword determines whether the chain of functions will continue or something like that. But, interestingly, you don't really need to pass in handles to the next middleware function, that will be done without you having to do anything. You can use error middleware that will get called whenever a new Error is sent. The mediator loads the middleware components and then passes the request around to the middleware components.
