@@ -281,4 +281,25 @@ Our web browser gets things from the EC2 web server, which is called the backend
 
 Parts of a URL: `<scheme>://<domain name>:<port>/<path>?<parameters>#<anchor>`.
 
-Fetch is the modern replacement for multiHttpRequest
+Fetch is the modern replacement for XMLHTTP request. Which uses callbacks. Fetch is Promise-based! That is interesting. Here is an example of how to use fetch:
+
+```javascript
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }), 
+  // ...
+});
+```
+
+As a side note, we do need to use the `if(!response.ok) {throw new Error(...)}` when making requests, so that we know we're sure that we actually got a response that was good. If it's 404, then it will return a response, but it won't have the correct information, so we need to throw the error. The response interface provides methods for reading the response body!! Such as `Response.arrayBuffer()`, or `Response.json()` which I should probably look up! For long text streams, it is important to be able to stream the data so we can display what we have rather than waiting until the whole thing is loaded. I might want to use a similar technique when I am retrieving the users data and past questions.
+
+Aother example of how to use the fetch element:
+
+```javascript
+const url2 = "https://api.github.com/users/cpaulmech"
+fetch(url2)
+.then((x)=>x.json()) //converts the response to json
+.then((response)=> {
+    document.querySelector("pre").textContent = JSON.stringify(response, null, "  ")
+})
+```
