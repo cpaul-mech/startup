@@ -303,3 +303,7 @@ fetch(url2)
     document.querySelector("pre").textContent = JSON.stringify(response, null, "  ")
 })
 ```
+
+Express is super important and stuff. use an Express `app` object that supports all the methods we need!! Like get, post, delete and other things. This allows us to handle the .get method, and then return a response using the `res.send({})` syntax. 
+
+MiddleWare is a little bit strange sounding. I don't really like it. Represents 'componentized pieces of functionality.' Also, the next handler or function is tripping me up a little. Oh, so the next keyword determines whether the chain of functions will continue or something like that. 
