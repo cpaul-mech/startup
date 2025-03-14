@@ -13,7 +13,7 @@ export function QuestionAndAnswer() {
     }
     async function saveQA(question, answer) {
         const newQA = {question: question, answer: answer}
-        updateQALocal(newQA);
+        sendQuestionAnswerServer(newQA);
     }
 
     function getRandomAnswer (array) {
@@ -61,6 +61,22 @@ export function QuestionAndAnswer() {
         }
         qa.push(newQA);
         localStorage.setItem('qaList',JSON.stringify(qa))
+    }
+    
+    async function sendQuestionAnswerServer(newQA){
+        const response = await fetch('api/auth/newQuestionAnswerPair', {
+            method: 'post',
+            body: JSON.stringify(newQA),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        });
+        if (response?.status === 200) {
+            updateQALocal(newQA);
+        } else {
+        const body = await response.json();
+        setDisplayError(`⚠ Error: ${body.msg}`);
+        }
     }
 
   return (
