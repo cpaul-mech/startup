@@ -65,8 +65,10 @@ export function QuestionAndAnswer() {
     
     async function sendQuestionAnswerServer(newQA){
         const response = await fetch('api/auth/newQuestionAnswerPair', {
-            method: 'post',
-            body: JSON.stringify(newQA),
+            method: 'POST',
+            body: JSON.stringify({username: localStorage.getItem('userName'),
+                    questionAndAnswer: JSON.stringify(newQA)
+            }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
