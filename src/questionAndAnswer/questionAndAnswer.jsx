@@ -55,16 +55,16 @@ export function QuestionAndAnswer() {
 
     function updateQALocal(newQA) {
         let qa = [];
-        const qaString = localStorage.getItem('qaList');
+        const qaString = localStorage.getItem(localStorage.getItem('userName'));
         if(qaString) {
             qa = JSON.parse(qaString);
         }
         qa.push(newQA);
-        localStorage.setItem('qaList',JSON.stringify(qa))
+        localStorage.setItem(localStorage.getItem('userName'),JSON.stringify(qa))
     }
     
     async function sendQuestionAnswerServer(newQA){
-        const response = await fetch('api/auth/newQuestionAnswerPair', {
+        const response = await fetch('api/newQuestionAnswerPair', {
             method: 'POST',
             body: JSON.stringify({username: localStorage.getItem('userName'),
                     questionAndAnswer: JSON.stringify(newQA)

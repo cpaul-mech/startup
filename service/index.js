@@ -57,7 +57,18 @@ apiRouter.delete('/auth/logout', async (req, res) => {
   res.status(204).end();
 });
 
-//TODO: implement functionality to store questions and answers.
+apiRouter.post('api/newQuestionAnswerPair', verifyAuth, async (req, res)=>{
+  
+}); 
+
+const verifyAuth = async (req, res, next) => {
+  const user = await findUser('token', req.cookies[authCookieName]);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+};
 
 // Default error handler
 app.use(function (err, req, res, next) {

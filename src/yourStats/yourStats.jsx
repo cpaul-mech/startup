@@ -5,7 +5,7 @@ export function YourStats() {
     const [qaList, setQAList] = React.useState([]);
 
     React.useEffect(()=> {
-        const qaText = localStorage.getItem('qaList');
+        const qaText = localStorage.getItem(localStorage.getItem('userName'));
         if(qaText) {
             setQAList(JSON.parse(qaText))
         }
