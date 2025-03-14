@@ -57,6 +57,8 @@ res.clearCookie(authCookieName);
 res.status(204).end();
 });
 
+//TODO: implement functionality to store questions and answers.
+
 // Default error handler
 app.use(function (err, req, res, next) {
 res.status(500).send({ type: err.name, message: err.message });
