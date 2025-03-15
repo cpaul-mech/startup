@@ -4,20 +4,21 @@ import './yourStats.css';
 export function YourStats() {
     const [qaList, setQAList] = React.useState([]);
 
-    React.useEffect(()=> {
-        const qaText = localStorage.getItem(localStorage.getItem('userName'));
-        if(qaText) {
-            setQAList(JSON.parse(qaText))
-        }
+    React.useEffect(() => {
+        fetch('/api/qaPairs')
+            .then((response) => response.json())
+            .then((qaList) => {
+                setQAList(qaList);
+            });
     }, [])
 
     const qaRows = [];
-    if(qaList.length) {
-        for(const [i, qa] of qaList.entries()){
+    if (qaList.length) {
+        for (const [i, qa] of qaList.entries()) {
             qaRows.push(
                 <tr key={i}>
                     <td>{qa.question}</td>
-                    <td>{qa.answer}</td>                    
+                    <td>{qa.answer}</td>
                 </tr>
             )
         }
@@ -29,52 +30,52 @@ export function YourStats() {
         );
     }
 
-    function calcNumQuestions(){
+    function calcNumQuestions() {
         let uniqueQuestions = [];
-        if(qaList.length){
+        if (qaList.length) {
             for (const [i, qa] of qaList.entries()) {
                 //now I need to check it against a list of entries that 
-                if(!uniqueQuestions.includes(qa.question)){
+                if (!uniqueQuestions.includes(qa.question)) {
                     uniqueQuestions.push(qa.question);
                 }
             }
             return uniqueQuestions.length;
-        }else{
+        } else {
             return 0;
         }
     }
 
-    function calcNumAnswers(){
+    function calcNumAnswers() {
         let uniqueAnswers = [];
-        if(qaList.length){
+        if (qaList.length) {
             for (const [i, qa] of qaList.entries()) {
                 //now I need to check it against a list of entries that 
-                if(!uniqueAnswers.includes(qa.answer)){
+                if (!uniqueAnswers.includes(qa.answer)) {
                     uniqueAnswers.push(qa.answer);
                 }
             }
             return uniqueAnswers.length;
-        }else{
+        } else {
             return 0;
         }
     }
 
-  return (
-    <main className="container-fluid">
-        <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball smaller"
-            width="100"></img>
-        <h3>{localStorage.getItem('userName')} has asked: {calcNumQuestions()} unique questions of the 8 ball</h3>
-        <h3>{localStorage.getItem('userName')} has received: {calcNumAnswers()} different types of wisdom</h3>
+    return (
+        <main className="container-fluid">
+            <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball smaller"
+                width="100"></img>
+            <h3>{localStorage.getItem('userName')} has asked: {calcNumQuestions()} unique questions of the 8 ball</h3>
+            <h3>{localStorage.getItem('userName')} has received: {calcNumAnswers()} different types of wisdom</h3>
             <table className="table-bordered">
                 <thead>
                     <tr>
-                    <th>Your questions</th>
-                    <th>Answers</th>
+                        <th>Your questions</th>
+                        <th>Answers</th>
                     </tr>
                 </thead>
                 <tbody id='qaList'>{qaRows}
                 </tbody>
             </table>
-    </main>
-  );
+        </main>
+    );
 }

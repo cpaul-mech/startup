@@ -75,7 +75,8 @@ export function QuestionAndAnswer() {
             }),
         });
         if (response?.status === 200) {
-            updateQALocal(newQA);
+            // updateQALocal(newQA);
+            console.log("move Along");
         } else {
         const body = await response.json();
         setDisplayError(`⚠ Error: ${body.msg}`);

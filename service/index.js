@@ -72,6 +72,12 @@ apiRouter.post('/newQuestionAnswerPair', verifyAuth, async (req, res) => {
   res.send({ Success: "you did it" })
 });
 
+// GetQAPairs
+apiRouter.get('/qaPairs', verifyAuth, async (req, res) => {
+  const user = await findUser('token', req.cookies[authCookieName]);
+  res.send(usersAndQAlist.get(user.email));
+});
+
 // Default error handler
 app.use(function (err, req, res, next) {
   res.status(500).send({ type: err.name, message: err.message });
