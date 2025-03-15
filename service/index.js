@@ -112,17 +112,15 @@ function setAuthCookie(res, authToken) {
 
 async function updateUserQuestionAndAnswerList(userName, qaList) {
   //need to use the global variable questionAndAnswerPerUser to 
+  //qaList is actually not going to be a list, rather it will be a single element.
+  let newQAValue = {}
+  let oldQAList = []
   if (usersAndQAlist.has(userName)) {
-    oldQAList = usersAndQAlist('userName');
-    newQAValues = JSON.parse(qaList);
-    for (let index = 0; index < newQAValues.length; index++) {
-      oldQAList.push(newQAValues[index])
-    }
-  }else {
-    newQAValues = JSON.parse(qaList);
-    usersAndQAlist.set(userName,newQAValues);
+    oldQAList = usersAndQAlist.get(userName);
   }
-
+  newQAValue = JSON.parse(qaList);
+  oldQAList.push(newQAValue);
+  usersAndQAlist.set(userName, oldQAList);
 }
 
 app.listen(port, () => {
