@@ -8,8 +8,7 @@ const authCookieName = 'token';
 
 // The scores and users are saved in memory and disappear whenever the service is restarted.
 let users = [];
-let questionAnswerPairs = [];
-
+const usersAndQAlist = new Map();
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
@@ -20,6 +19,15 @@ app.use(cookieParser());
 // Router for service endpoints
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
+
+const verifyAuth = async (req, res, next) => {
+  const user = await findUser('token', req.cookies[authCookieName]);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+};
 
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
@@ -57,18 +65,12 @@ apiRouter.delete('/auth/logout', async (req, res) => {
   res.status(204).end();
 });
 
-apiRouter.post('api/newQuestionAnswerPair', verifyAuth, async (req, res)=>{
-  
-}); 
-
-const verifyAuth = async (req, res, next) => {
-  const user = await findUser('token', req.cookies[authCookieName]);
-  if (user) {
-    next();
-  } else {
-    res.status(401).send({ msg: 'Unauthorized' });
-  }
-};
+apiRouter.post('/newQuestionAnswerPair', verifyAuth, async (req, res) => {
+  console.log("receiving data and such");
+  console.log(req.body);
+  updateUserQuestionAndAnswerList(req.body.userName, req.body.questionAndAnswer);
+  res.send({ Success: "you did it" })
+});
 
 // Default error handler
 app.use(function (err, req, res, next) {
@@ -106,6 +108,21 @@ function setAuthCookie(res, authToken) {
     httpOnly: true,
     sameSite: 'strict',
   });
+}
+
+async function updateUserQuestionAndAnswerList(userName, qaList) {
+  //need to use the global variable questionAndAnswerPerUser to 
+  if (usersAndQAlist.has(userName)) {
+    oldQAList = usersAndQAlist('userName');
+    newQAValues = JSON.parse(qaList);
+    for (let index = 0; index < newQAValues.length; index++) {
+      oldQAList.push(newQAValues[index])
+    }
+  }else {
+    newQAValues = JSON.parse(qaList);
+    usersAndQAlist.set(userName,newQAValues);
+  }
+
 }
 
 app.listen(port, () => {

@@ -25,11 +25,11 @@ export function QuestionAndAnswer() {
         setQuestion(event.target.value);
     }
 
-    setInterval(() => {
-        // This will be replaced with WebSocket messages
-        const userName = `User-${Math.floor(Math.random() * 100)}`;
-        console.log({ userName: userName, string: "Received an answer" });
-    }, 1000);
+    // setInterval(() => {
+    //     // This will be replaced with WebSocket messages
+    //     const userName = `User-${Math.floor(Math.random() * 100)}`;
+    //     console.log({ userName: userName, string: "Received an answer" });
+    // }, 1000);
     
 
     const handleKeyPress = (event) => {
@@ -66,12 +66,12 @@ export function QuestionAndAnswer() {
     async function sendQuestionAnswerServer(newQA){
         const response = await fetch('api/newQuestionAnswerPair', {
             method: 'POST',
-            body: JSON.stringify({username: localStorage.getItem('userName'),
-                    questionAndAnswer: JSON.stringify(newQA)
-            }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
+            body: JSON.stringify({username: localStorage.getItem('userName'),
+                questionAndAnswer: JSON.stringify(newQA)
+            }),
         });
         if (response?.status === 200) {
             updateQALocal(newQA);
