@@ -125,11 +125,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **User registration** - I did not complete this part of the deliverable.
-- [ ] **User login and logout** - I did not complete this part of the deliverable.
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Restricts functionality based on authentication** - I did not complete this part of the deliverable.
+- [x] **User registration** - Users can still register, but their credentials are now stored in MongoDB.
+- [x] **User login and logout** - Users can still login and logout as normal, the landing page still updates accordingly, but, again, their credentials are now stored in MongoDB.
+- [x] **Stores data in MongoDB** - I implemented storing user data in MongoDB, so that the user can click on the "your stats" page and see all the questions they've ever asked and all the answers they've received. Maybe someday I will need to implement periodic cleansing of the database. I wonder if simon is as intelligent about that.
+- [x] **Stores credentials in MongoDB** - I implemented storing user credentials in MongoDB, so that the user can log in again even if the website is restarted.
+- [x] **Restricts functionality based on authentication** - My code does restrict functionality based on authentication. You cannot access your stats page or the question and answer page without logging in.
 
 ## 🚀 WebSocket deliverable
 
