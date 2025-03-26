@@ -68,17 +68,19 @@ apiRouter.delete('/auth/logout', async (req, res) => {
   res.status(204).end();
 });
 
+// Create New Question and Answer Pair.
 apiRouter.post('/newQuestionAnswerPair', verifyAuth, async (req, res) => {
   console.log("receiving data and such");
   console.log(req.body);
-  updateUserQuestionAndAnswerList(req.body.userName, req.body.questionAndAnswer);
+  updateUserQuestionAndAnswerList(req.body.userName, req.body.question, req.body.answer);
   res.send({ Success: "you did it" })
 });
 
 // GetQAPairs
 apiRouter.get('/qaPairs', verifyAuth, async (req, res) => {
   const user = await findUser('token', req.cookies[authCookieName]);
-  res.send(usersAndQAlist.get(user.email));
+  // res.send(usersAndQAlist.get(user.email));
+  res.send(DB.getQAPairs(user.email));
 });
 
 // Default error handler
@@ -122,17 +124,13 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-async function updateUserQuestionAndAnswerList(userName, qaList) {
-  //need to use the global variable questionAndAnswerPerUser to 
-  //qaList is actually not going to be a list, rather it will be a single element.
-  let newQAValue = {}
-  let oldQAList = []
-  if (usersAndQAlist.has(userName)) {
-    oldQAList = usersAndQAlist.get(userName);
-  }
-  newQAValue = JSON.parse(qaList);
-  oldQAList.push(newQAValue);
-  usersAndQAlist.set(userName, oldQAList);
+async function updateUserQuestionAndAnswerList(userName, question, answer) {
+  const qaObject = {
+    userName: userName,
+    question: question,
+    answer: answer
+  };
+  DB.addQAPair(qaObject);
 }
 
 app.listen(port, () => {

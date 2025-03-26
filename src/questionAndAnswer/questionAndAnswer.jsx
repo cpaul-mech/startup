@@ -13,12 +13,11 @@ export function QuestionAndAnswer() {
     }
 
     async function saveQA(question, answer) {
-        const newQA = {question: question, answer: answer}
-        sendQuestionAnswerServer(newQA);
+        sendQuestionAnswerServer(question, answer);
     }
 
-    function getRandomAnswer (array) {
-        const randomIndex = Math.floor(Math.random()*array.length)
+    function getRandomAnswer(array) {
+        const randomIndex = Math.floor(Math.random() * array.length)
         return array[randomIndex]
     }
 
@@ -31,25 +30,25 @@ export function QuestionAndAnswer() {
     //     const userName = `User-${Math.floor(Math.random() * 100)}`;
     //     console.log({ userName: userName, string: "Received an answer" });
     // }, 1000);
-    
+
 
     const handleKeyPress = (event) => {
-        if(event.key === "Enter") {
+        if (event.key === "Enter") {
             event.preventDefault();
             const question = userQuestionInput.value;
             const answer = getRandomAnswer(standInAnswers);
             setAnswerText(answer);
             saveQA(question, answer);
-            console.log({question}, {answer})
+            console.log({ question }, { answer })
             setQuestion("");
             //need to display the answer here!
         }
     }
 
     function FormatAnswer() {
-        if(answerText === ""){
+        if (answerText === "") {
             return <h3>The Cosmic 8 Ball will respond here</h3>
-        }else {
+        } else {
             return <h4>The answer is: {answerText}</h4>
         }
     }
@@ -57,46 +56,50 @@ export function QuestionAndAnswer() {
     function updateQALocal(newQA) {
         let qa = [];
         const qaString = localStorage.getItem(localStorage.getItem('userName'));
-        if(qaString) {
+        if (qaString) {
             qa = JSON.parse(qaString);
         }
         qa.push(newQA);
-        localStorage.setItem(localStorage.getItem('userName'),JSON.stringify(qa))
+        localStorage.setItem(localStorage.getItem('userName'), JSON.stringify(qa))
     }
-    
-    async function sendQuestionAnswerServer(newQA){
+
+    async function sendQuestionAnswerServer(question, answer) {
         const response = await fetch('api/newQuestionAnswerPair', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
-            body: JSON.stringify({userName: localStorage.getItem('userName'),
-                questionAndAnswer: JSON.stringify(newQA)
-            }),
+            body: JSON.stringify(
+                {
+                    userName: localStorage.getItem('userName'),
+                    question: question,
+                    answer: answer
+                }
+            ),
         });
         if (response?.status === 200) {
             // updateQALocal(newQA);
             console.log("move Along");
         } else {
-        const body = await response.json();
-        setDisplayError(`⚠ Error: ${body.msg}`);
+            const body = await response.json();
+            setDisplayError(`⚠ Error: ${body.msg}`);
         }
     }
 
-  return (
-    <main className="container-fluid">
-        <h1>The wisdom of the Great and Magical Cosmic 8 Ball is at your disposal</h1>
-        <img id="eightBallImgLooming" src="Chris_Cosmic_8_Ball_looming.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
-            width="800"></img>
-        <h2>Ask, {localStorage.getItem('userName')}, and you shall receive your answer</h2>
-        <form onSubmit={(e) => e.preventDefault()}>
-            {/* <!-- #TODO: fill out what this does with react and javascript. --> */}
-            <div className="input-group mb-3">
-                <input className="form-control" id="UserQuestion" type-="text" value={question} placeholder="Ask your Question" onChange={handleInputChange} onKeyUp={handleKeyPress} />
-            </div>
-        </form>
-        <FormatAnswer></FormatAnswer>
-        <div id='otherQuestions'>Other Player messages will be receivfed here</div>
-    </main>
-  );
+    return (
+        <main className="container-fluid">
+            <h1>The wisdom of the Great and Magical Cosmic 8 Ball is at your disposal</h1>
+            <img id="eightBallImgLooming" src="Chris_Cosmic_8_Ball_looming.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
+                width="800"></img>
+            <h2>Ask, {localStorage.getItem('userName')}, and you shall receive your answer</h2>
+            <form onSubmit={(e) => e.preventDefault()}>
+                {/* <!-- #TODO: fill out what this does with react and javascript. --> */}
+                <div className="input-group mb-3">
+                    <input className="form-control" id="UserQuestion" type-="text" value={question} placeholder="Ask your Question" onChange={handleInputChange} onKeyUp={handleKeyPress} />
+                </div>
+            </form>
+            <FormatAnswer></FormatAnswer>
+            <div id='otherQuestions'>Other Player messages will be receivfed here</div>
+        </main>
+    );
 }

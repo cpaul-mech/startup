@@ -34,9 +34,24 @@ async function updateUser(user) {
     await userCollection.updateOne({ email: user.email }, { $set: user });
 }
 
+async function addQAPair(qaObject){
+    await qaCollection.insertOne(qaObject);
+}
+
+async function getQAPairs(userName) {
+    const query = { user: userName }
+    const options = {
+        projection: { question: 1, answer: 1, _id: 0, _user: 0 }
+    };
+    const cursor = qaCollection.find(query, options)
+
+}
+
 module.exports = {
     getUser,
     getUserByToken,
     addUser,
     updateUser,
+    addQAPair,
+    getQAPairs
 };
