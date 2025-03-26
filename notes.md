@@ -309,3 +309,7 @@ Express is super important and stuff. use an Express `app` object that supports 
 MiddleWare is a little bit strange sounding. I don't really like it. Represents 'componentized pieces of functionality.' Also, the next handler or function is tripping me up a little. Oh, so the next keyword determines whether the chain of functions will continue or something like that. But, interestingly, you don't really need to pass in handles to the next middleware function, that will be done without you having to do anything. You can use error middleware that will get called whenever a new Error is sent. The mediator loads the middleware components and then passes the request around to the middleware components.
 
 The login example will be quite helpful I think. in helping me to understand how to implement login. I think that I am finally getting how to do the service with Node.js, and the frontend with the web browser and npm vite.
+
+### Database Services
+
+Aws has a super popular database service, but we're going to use the Mungo database, there was a lot of instructions on the thing, but the simon-db has a great example of stuff to do to access and create databases. Also I'm pretty sure that the database will be created if it doesn't exist yet.
