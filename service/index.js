@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const express = require('express');
 const uuid = require('uuid');
 const app = express();
+const DB = require('./database.js');
 
 const authCookieName = 'token';
 
@@ -17,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Router for service endpoints
-var apiRouter = express.Router();
+const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 const verifyAuth = async (req, res, next) => {
@@ -96,7 +97,7 @@ async function createUser(email, password) {
     password: passwordHash,
     token: uuid.v4(),
   };
-  users.push(user);
+  await DB.addUser(user);
 
   return user;
 }
@@ -104,7 +105,10 @@ async function createUser(email, password) {
 async function findUser(field, value) {
   if (!value) return null;
 
-  return users.find((u) => u[field] === value);
+  if (field === 'token') {
+    return DB.getUserByToken(value);
+  }
+  return DB.getUser(value);
 }
 
 // setAuthCookie in the HTTP response
