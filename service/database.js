@@ -37,3 +37,10 @@ async function updateUser(user) {
 async function addScore(score) {
   return scoreCollection.insertOne(score);
 }
+
+module.exports = {
+    getUser,
+    getUserByToken,
+    addUser,
+    updateUser,
+  };
