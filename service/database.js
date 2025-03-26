@@ -11,7 +11,7 @@ const qaCollection = db.collection('QAs');
 (async function testConnection() {
     try {
         await db.command({ ping: 1 });
-        console.log(`Connect to database`);
+        console.log(`Connected to database`);
     } catch (ex) {
         console.log(`Unable to connect to database with ${url} because ${ex.message}`);
         process.exit(1);
@@ -39,12 +39,14 @@ async function addQAPair(qaObject){
 }
 
 async function getQAPairs(userName) {
-    const query = { user: userName }
+    const query = { userName: userName }
     const options = {
-        projection: { question: 1, answer: 1, _id: 0, _user: 0 }
+        projection: { question: 1, answer: 1, _id: 0}
     };
     const cursor = qaCollection.find(query, options)
-
+    const qaList = await cursor.toArray();
+    console.log(qaList);
+    return qaList;
 }
 
 module.exports = {

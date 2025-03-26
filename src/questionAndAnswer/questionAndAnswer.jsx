@@ -99,7 +99,7 @@ export function QuestionAndAnswer() {
                 </div>
             </form>
             <FormatAnswer></FormatAnswer>
-            <div id='otherQuestions'>Other Player messages will be receivfed here</div>
+            <div id='otherQuestions'>Other Player messages will be received here</div>
         </main>
     );
 }

@@ -6,8 +6,12 @@ export function YourStats() {
 
     React.useEffect(() => {
         fetch('/api/qaPairs')
-            .then((response) => response.json())
+            .then((response) => {
+                console.log('Response: ',response);
+                return response.json();
+            })
             .then((qaList) => {
+                console.log('Parsed Json: ', qaList);
                 setQAList(qaList);
             });
     }, [])

@@ -80,7 +80,8 @@ apiRouter.post('/newQuestionAnswerPair', verifyAuth, async (req, res) => {
 apiRouter.get('/qaPairs', verifyAuth, async (req, res) => {
   const user = await findUser('token', req.cookies[authCookieName]);
   // res.send(usersAndQAlist.get(user.email));
-  res.send(DB.getQAPairs(user.email));
+  const qaList = await DB.getQAPairs(user.email);
+  res.send(qaList);
 });
 
 // Default error handler
