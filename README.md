@@ -32,8 +32,8 @@ But wait there's more, this 8 ball isn't just your everyday, run-of-the-mill mag
 
 ### Design
 
-![Login Page](graphics/Login_page_chris_website.png)
-![Design image](graphics/Chris_Website_layout.png)
+![Login Page](public/Login_page_chris_website.png)
+![Design image](public/Chris_Website_layout.png)
 
 <!-- 
 ```mermaid
@@ -130,6 +130,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Stores data in MongoDB** - I implemented storing user data in MongoDB, so that the user can click on the "your stats" page and see all the questions they've ever asked and all the answers they've received. Maybe someday I will need to implement periodic cleansing of the database. I wonder if simon is as intelligent about that.
 - [x] **Stores credentials in MongoDB** - I implemented storing user credentials in MongoDB, so that the user can log in again even if the website is restarted.
 - [x] **Restricts functionality based on authentication** - My code does restrict functionality based on authentication. You cannot access your stats page or the question and answer page without logging in.
+
+Further evidence that I have completed this deliverable ![deliverable](public/evidenceMongoDB.png).
 
 ## 🚀 WebSocket deliverable
 
