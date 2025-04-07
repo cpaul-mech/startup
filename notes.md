@@ -313,3 +313,7 @@ The login example will be quite helpful I think. in helping me to understand how
 ### Database Services
 
 Aws has a super popular database service, but we're going to use the Mungo database, there was a lot of instructions on the thing, but the simon-db has a great example of stuff to do to access and create databases. Also I'm pretty sure that the database will be created if it doesn't exist yet.
+
+### Testing with Playwright
+
+Testing is interesting, from what I understand it's kinda like the automated java testing I did for my chess project, only it is designed to test use cases with the web browser. 
