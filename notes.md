@@ -322,4 +322,4 @@ Testing is interesting, from what I understand it's kinda like the automated jav
 
 I have worked with websocket for my chess project in CS 240, so I am familiar with the idea. Learning how to use it with Jsx and react will be interesting. It seems like we will use JavaScript WebSocket objects to implement the functionality on both the server and the client side. Again using the `socket.onmessage()` function to specify what happens when a message is received. The `socket.send()` function is used to send messages to the server. The server uses the WebSocketServer package (called `ws`) to handle it's information.
 
-The peerproxy file is especially interetsing, I will need to do a similar thing only I should only need to transmit super basic information about what username is asking a question.
+The peerproxy file is especially interetsing, I will need to do a similar thing, only I should only need to transmit super basic information about what username is asking a question.
