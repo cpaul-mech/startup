@@ -2,7 +2,7 @@ import React from 'react';
 import './questionAndAnswer.css';
 import { GameEvent, GameNotifier } from './gameNotifier';
 import { Users } from './users';
-export function QuestionAndAnswer() {
+export function QuestionAndAnswer(props) {
     const [answerText, setAnswerText] = React.useState("");
     const [question, setQuestion] = React.useState("");
 
@@ -41,7 +41,7 @@ export function QuestionAndAnswer() {
             const answer = getRandomAnswer(standInAnswers);
             setAnswerText(answer);
             saveQA(question, answer);
-            GameNotifier.broadcastEvent(localStorage.getItem('userName'),GameEvent.Question,{answer: answer})
+            GameNotifier.broadcastEvent(props.userName,GameEvent.Question,{answer: answer})
             console.log({ question }, { answer })
             setQuestion("");
             //need to display the answer here!
@@ -74,7 +74,7 @@ export function QuestionAndAnswer() {
             },
             body: JSON.stringify(
                 {
-                    userName: localStorage.getItem('userName'),
+                    userName: props.userName,
                     question: question,
                     answer: answer
                 }
@@ -94,7 +94,7 @@ export function QuestionAndAnswer() {
             <h1>The wisdom of the Great and Magical Cosmic 8 Ball is at your disposal</h1>
             <img id="eightBallImgLooming" src="Chris_Cosmic_8_Ball_looming.png" alt="Cosmic 8 Ball placeholder, Generated with Dall-E 3"
                 width="800"></img>
-            <h2>Ask, {localStorage.getItem('userName')}, and you shall receive your answer</h2>
+            <h2>Ask, {props.userName}, and you shall receive your answer</h2>
             <form onSubmit={(e) => e.preventDefault()}>
                 {/* <!-- #TODO: fill out what this does with react and javascript. --> */}
                 <div className="input-group mb-3">
@@ -102,7 +102,7 @@ export function QuestionAndAnswer() {
                 </div>
             </form>
             <FormatAnswer></FormatAnswer>
-            <div id='otherQuestions'><Users/></div>
+            <div id='otherQuestions'><Users userName={props.userName}/></div>
         </main>
     );
 }

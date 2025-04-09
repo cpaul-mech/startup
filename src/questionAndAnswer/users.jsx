@@ -4,7 +4,7 @@ import { GameEvent, GameNotifier } from './gameNotifier';
 import './players.css';
 
 export function Users(props) {
-  const userName = props.userName;
+  const userName = ' '+props.userName;
 
   const [events, setEvent] = React.useState([]);
 
