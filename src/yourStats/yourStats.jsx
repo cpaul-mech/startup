@@ -1,7 +1,7 @@
 import React from 'react';
 import './yourStats.css';
 
-export function YourStats() {
+export function YourStats(props) {
     const [qaList, setQAList] = React.useState([]);
 
     React.useEffect(() => {
@@ -68,8 +68,8 @@ export function YourStats() {
         <main className="container-fluid">
             <img id="eightBallImg" src="Chris_Cosmic_8_Ball.png" alt="Cosmic 8 Ball smaller"
                 width="100"></img>
-            <h3>{localStorage.getItem('userName')} has asked: {calcNumQuestions()} unique questions of the 8 ball</h3>
-            <h3>{localStorage.getItem('userName')} has received: {calcNumAnswers()} different types of wisdom</h3>
+            <h3>{props.userName} has asked: {calcNumQuestions()} unique questions of the 8 ball</h3>
+            <h3>{props.userName} has received: {calcNumAnswers()} different types of wisdom</h3>
             <table className="table-bordered">
                 <thead>
                     <tr>

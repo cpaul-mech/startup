@@ -56,16 +56,6 @@ export function QuestionAndAnswer(props) {
         }
     }
 
-    function updateQALocal(newQA) {
-        let qa = [];
-        const qaString = localStorage.getItem(localStorage.getItem('userName'));
-        if (qaString) {
-            qa = JSON.parse(qaString);
-        }
-        qa.push(newQA);
-        localStorage.setItem(localStorage.getItem('userName'), JSON.stringify(qa))
-    }
-
     async function sendQuestionAnswerServer(question, answer) {
         const response = await fetch('api/newQuestionAnswerPair', {
             method: 'POST',

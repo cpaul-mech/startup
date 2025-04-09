@@ -50,7 +50,7 @@ function App() {
                         />} exact />
                     <Route path='/about' element={<About />} />
                     <Route path='/questionAndAnswer' element={<QuestionAndAnswer userName={userName}/>} />
-                    <Route path='/yourStats' element={<YourStats />} />
+                    <Route path='/yourStats' element={<YourStats userName={userName} />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
 
