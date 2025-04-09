@@ -324,4 +324,8 @@ I have worked with websocket for my chess project in CS 240, so I am familiar wi
 
 The peerproxy file is especially interetsing, I will need to do a similar thing, only I should only need to transmit super basic information about what username is asking a question.
 
-I think that the functionality in gameNotifier will be essential to 
+I think that the functionality in gameNotifier will be essential to helping me with my classes.
+
+So, the message prototype is an event message, and the content is kinda like this `from 'helpthisman' type 'gameEnd' value {name: 'helpthisman', score: 0, date: '4/8/2025'}` and the value is of type 
+
+the GameEvent class is being used basically as a mapped holder for strings, but functions like an enum!!!
