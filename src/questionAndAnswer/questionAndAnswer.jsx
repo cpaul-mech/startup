@@ -2,6 +2,7 @@ import React from 'react';
 import './questionAndAnswer.css';
 import { GameEvent, GameNotifier } from './gameNotifier';
 import { Users } from './users';
+import { getRandomAnimeQuote, getRandomCatFact } from './thirdPartyApiCalls';
 export function QuestionAndAnswer(props) {
     const [answerText, setAnswerText] = React.useState("");
     const [question, setQuestion] = React.useState("");
@@ -9,9 +10,29 @@ export function QuestionAndAnswer(props) {
     const standInAnswers = getExternalAnswers();
     const userQuestionInput = document.getElementById("UserQuestion");
 
-    function getExternalAnswers() {
-        //this will be replaced with a 3rd party service call
-        return ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"]
+    async function getExternalAnswers() {
+        const stringList = [
+            "It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", 
+            "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", 
+            "Yes", "Signs point to yes", "Reply hazy, try again", "Ask again later", 
+            "Better not tell you now", "Cannot predict now", "Concentrate and ask again", 
+            "Don't count on it", "My reply is no", "My sources say no", 
+            "Outlook not so good", "Very doubtful"
+        ];
+    
+        try {
+            // Fetch external answers
+            const [animeQuote, catFact] = await Promise.all([
+                getRandomAnimeQuote(),
+                getRandomCatFact()
+            ]);
+    
+            // Add external answers to the list
+            stringList.push(animeQuote, catFact);
+        } catch (error) {
+            console.error("Error fetching external answers:", error);
+        }
+        return stringList;
     }
 
     async function saveQA(question, answer) {
