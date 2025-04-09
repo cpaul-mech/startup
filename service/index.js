@@ -135,9 +135,9 @@ async function updateUserQuestionAndAnswerList(userName, question, answer) {
   DB.addQAPair(qaObject);
 }
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });
 
 const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
