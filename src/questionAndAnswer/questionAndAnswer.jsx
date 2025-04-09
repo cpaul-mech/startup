@@ -7,7 +7,7 @@ export function QuestionAndAnswer(props) {
     const [answerText, setAnswerText] = React.useState("");
     const [question, setQuestion] = React.useState("");
 
-    const standInAnswers = getExternalAnswers();
+    // const standInAnswers = getExternalAnswers();
     const userQuestionInput = document.getElementById("UserQuestion");
 
     async function getExternalAnswers() {
@@ -22,13 +22,12 @@ export function QuestionAndAnswer(props) {
     
         try {
             // Fetch external answers
-            const [animeQuote, catFact] = await Promise.all([
-                getRandomAnimeQuote(),
+            const [catFact] = await Promise.all([
                 getRandomCatFact()
             ]);
     
             // Add external answers to the list
-            stringList.push(animeQuote, catFact);
+            stringList.push(catFact);
         } catch (error) {
             console.error("Error fetching external answers:", error);
         }
@@ -55,11 +54,12 @@ export function QuestionAndAnswer(props) {
     // }, 1000);
 
 
-    const handleKeyPress = (event) => {
+    const handleKeyPress = async (event) => {
         if (event.key === "Enter") {
             event.preventDefault();
             const question = userQuestionInput.value;
-            const answer = getRandomAnswer(standInAnswers);
+            const answerList = await getExternalAnswers();
+            const answer = getRandomAnswer(answerList);
             setAnswerText(answer);
             saveQA(question, answer);
             GameNotifier.broadcastEvent(props.userName,GameEvent.Question,{answer: answer})
