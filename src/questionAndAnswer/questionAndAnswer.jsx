@@ -1,5 +1,7 @@
 import React from 'react';
 import './questionAndAnswer.css';
+import { GameEvent, GameNotifier } from './gameNotifier';
+import { Users } from './users';
 export function QuestionAndAnswer() {
     const [answerText, setAnswerText] = React.useState("");
     const [question, setQuestion] = React.useState("");
@@ -39,6 +41,7 @@ export function QuestionAndAnswer() {
             const answer = getRandomAnswer(standInAnswers);
             setAnswerText(answer);
             saveQA(question, answer);
+            GameNotifier.broadcastEvent(localStorage.getItem('userName'),GameEvent.Question,{answer: answer})
             console.log({ question }, { answer })
             setQuestion("");
             //need to display the answer here!
@@ -99,7 +102,7 @@ export function QuestionAndAnswer() {
                 </div>
             </form>
             <FormatAnswer></FormatAnswer>
-            <div id='otherQuestions'>Other Player messages will be received here</div>
+            <div id='otherQuestions'><Users/></div>
         </main>
     );
 }
