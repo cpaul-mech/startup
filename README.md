@@ -137,8 +137,8 @@ Further evidence that I have completed this deliverable ![deliverable](public/ev
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** - The backend server does listen for websocket connections.
+- [x] **Frontend makes WebSocket connection** - I did complete this part of the deliverable, frontend makes a websocket connection to the backend.
+- [x] **Data sent over WebSocket connection** - Data is sent over Websocket connection.
+- [x] **WebSocket data displayed** - my Websocket data is displayed at the bottom of the website, and I have worked on displaying the data in a good looking way.
+- [ ] **Application is fully functional** - I have almost completed this part of the deliverable, but I have not yet completed the additional webapi part.
